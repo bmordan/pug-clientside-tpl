@@ -1,0 +1,22 @@
+mixin newsItems (results)
+  include news-items-tpl
+
+doctype html
+html(lang='en')
+  html
+    head
+      link(rel='stylesheet' href='style.css')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    body.measure.center.system-sans-serif.bg-near-white
+      article.silver.relative
+        .header.tc.mb0.flex.flex-row.justify-between
+          .pv3.f5.tab.o-7.bg-red.active(data-section='uk-news') UK News
+          .pv3.f5.tab.o-7.bg-green(data-section='football') Football
+          .pv3.f5.tab.o-7.bg-blue(data-section='travel') Travel
+        ol#travel.list.center.bg-white.pl0.absolute.top-0.mb5
+        ol#football.list.center.bg-white.pl0.absolute.top-0.mb5
+        ol#uk-news.list.center.bg-white.pl0.absolute.top-0.mb5
+          +newsItems(results)
+        footer#more.tc.pt5.pb3.fixed.bottom-0.left-0.w-100 load more stories...
+      script(src='bundle.js')
+      script(src='templates.js')

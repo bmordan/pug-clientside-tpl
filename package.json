@@ -1,0 +1,23 @@
+{
+  "name": "pug-clientside-tpl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard",
+    "build": "npm run build:html && npm run build:js",
+    "build:html": "node build.js",
+    "build:js": "browserify src/main.js -o dist/bundle.js",
+    "deploy": "npm run build && surge ./dist bernardmordan.surge.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "pug": "^2.0.0-rc.4",
+    "async": "^2.5.0"
+  }
+}

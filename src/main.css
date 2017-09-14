@@ -1,0 +1,12 @@
+.tab {
+  width: 33.333333%;
+  color: rgba(255,255,255,0.7);
+}
+.active {
+  color: white;
+  box-shadow: 0 4px 0 #FFF;
+  opacity: 1;
+}
+.list {
+  margin-top: 4rem;
+}
